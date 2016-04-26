@@ -1,0 +1,2 @@
+create table FireEmblemUsers (Username Varchar (50), Email Varchar (50), Password Varchar (16), Affiliation Varchar (15), Character1 Varchar (50), Character2 Varchar (50), Character3 Varchar (50), Character4 Varchar (50), Character5 Varchar (50), Character6 Varchar (50), Character7 Varchar (50), Character8 Varchar (50), Character9 Varchar (50), Character10 Varchar (50), Wins Int (3), Losses Int (3))
+Alter Table FireEmblemUsers ADD ID int not null auto_increment primary key

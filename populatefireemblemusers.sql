@@ -1,0 +1,3 @@
+insert into FireEmblemUsers Values('kotominekirei', 'noschese@bc.edu', 'KireiMaru', 'Hoshido', 'Corrin.m', 'Ryoma', 'Takumi', 'Hinoka', 'Kaze', 'Sakura', 'Silas', 'Setsuna', 'Orochi', 'Subaki', 0, 0, 1) 
+insert into FireEmblemUsers Values('saybah', 'supannar@bc.edu', 'KireiMaru', 'Nohr', 'Corrin.m', 'Xander', 'Leo', 'Camilla', 'Arthur', 'Effie', 'Silas', 'Elise', 'Niles', 'Nyx', 0, 0, 2) 
+insert into FireEmblemUsers Values('kamui', 'katzry@bc.edu', 'KireiMaru', 'Neutral', 'Corrin.f', 'Ryoma', 'Leo', 'Camilla', 'Takumi', 'Effie', 'Silas', 'Elise', 'Jakob', 'Sakura', 0, 0, 3) 
