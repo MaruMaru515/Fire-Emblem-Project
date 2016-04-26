@@ -1,0 +1,32 @@
+1.Create account
+Actor: User
+Precondition: Access webpage
+Postcondition: User is added to FireEmblemUsers table
+Queries: insert into fireemblemusers (username, email, password, affiliation, wins, losses) values (‘$name’, ’$mail’, ‘$pass’, ‘$side’, 0, 0);
+
+2.Create Team
+Actor: User
+Precondition: Must be signed in
+Postcondition: User creates a unique team of 10 characters from their affiliated country
+Queries: Select from fireemblemchars where affiliation=='$side' if n<10;
+	(n being the number of characters selected)
+	insert into fireemblemusers (character1, character2, character3, character4, character5, character6, character7, character8, character9, character10) 
+	values ('$char1', '$char2', '$char3', '$char4', '$char5', '$char6', '$char7', '$char8', '$char9', '$char10');
+	
+3.Battle
+Actor: User
+Precondition: Must be signed in and has created a team
+Postcondition: Wins and losses are updated depending on outcome
+Queries: update fireemblemusers set wins = wins/losses + 1 where id = $outcome;
+
+4.View Rankings
+Actor: User
+Precondition: Must be signed in, created a team, and played at least one battle
+Postcondition: View wins and losses of all users from fireemblemusers ordered by best to worst record
+Queries: select username, wins, losses from firemeblemusers order by wins ASC, losses DESC;
+
+5.Modify Database
+Actor: Admin
+Precondition: access phpmyadmin
+Postcondition: alter any table arbitrarily
+Queries: Alter table fireemblemusers, fireemblemchars etc.;
