@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Fire Emblem Sign In/Sign Up</title>
+	</head>
+	<body>
+		<div id="signin"><form action="http://www.example.com/login/" id="login" method="post">
+			<H1>Sign in</H1>
+			<label for="username">Username:</label>
+			<input type="text" name="username" id="username" required="required" /><br />
+			<label for="password">Password:</label>
+			<input type="text" name="password" id="password" required="required" />
+			<input type="submit" name="submit" id="submit" value="Login" />
+		</form>
+		<input type="submit" id="forgot" value="Forgot Password?" name="forgot" /></div>
+		<div id="signup"><form method="post" name="createuser" id="createuser">
+			<h2>Sign up</h2>
+			<label for="email">Email:</label>
+			<input type="text" name="createemail" id="createemail" required="required" /><br>
+			<label for="username">Username:</label>
+			<input type="text" name="createusername" id="createusername" required="required" /><br />
+			<label for="password">Password:</label>
+			<input type="text" name="createpassword" id="createpassword" required="required" /><br>
+			<p>Affiliation:
+				<br />
+				<input type="radio" name="Affiliation" value="Nohr" id="createaffiliation" checked="unchecked" /> Nohr
+				<input type="radio" name="Affiliation" value="Hoshido" id="createaffiliation" /> Hoshido
+			</p>
+			
+			<input type="submit" name="create" id="create" value="Sign Up" />
+		</form></div>
+	</body>
+</html>
