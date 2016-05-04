@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -12,8 +13,9 @@
 				<h1>Fire Emblem Fates Battle Simulator</h1>
 				<div id="nav">
 					<ul>
+				
 					<?php
-						if(!empty($_SESSION['Logged In']) && !empty($_SESSION['Username']))
+						if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 						{
 							echo $_SESSION['Username'];
 							echo '<br>';
@@ -21,10 +23,9 @@
 						}
 						else
 						{
-							echo "<a href="linktologin">Log In</a>";
+							echo "<a href=\"http://cscilab.bc.edu/~noschese/login1.php\">Log In</a>";
 						}
 					?>
-						<li><a href="http://cscilab.bc.edu/~katzry/hw13/Katzhw13.html">Log In</a></li>
 						<li><a href="http://fireemblemfates.nintendo.com/">Create Team</a></li>
 						<li><a href="http://fireemblem.wikia.com/wiki/Fire_Emblem_Fates">Battle</a></li>
 						<li><a href="https://kantopia.wordpress.com/2015/06/23/fire-emblem-fates-importers-source-chapter-data-ongoing/">Records</a></li>
