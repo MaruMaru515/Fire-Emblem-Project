@@ -38,43 +38,34 @@
 		else
 		{ 
 		?>
-		<form method="POST" action="login.php" name="loginform" id="loginform">
+		<form method="POST" action="login1.php" name="loginform" id="loginform">
 			<input type="text" 		name="username" id="username">Username</input><br>
 			<input type="password" 	name="password" id="password">Password</input><br>
 			<input type="submit" 	name="createuser" id="createuser" value="Log In" />
-		</sftp://noschese:@cscilab.bc.edu//home/noschese/public_html/login.phpform>
+		</sftp://noschese:@cscilab.bc.edu//home/noschese/public_html/login1.phpform>
 		<?php } ?>
-		<?php
-				$servername = "localhost";
-				$username = "noschese";
-				$password = "npEN4yQJ";
-				$dbname = "noschese";
+		<?php 
+if(isset($_GET['OK'])) {
+	
+$nuser = $_POST['nusername'];
+$npass = sha1($_POST['npassword']);
+$email = $_POST['email'];
 
-				// Create connection
-				$conn = new mysqli($servername, $username, $password, $dbname);
-				// Check connection
-				if ($conn->connect_error) {
-					die("Connection failed: " . $conn->connect_error);
-				} 
+$dbc = @mysqli_connect('localhost', 'noschese', 'npEN4yQJ', 'noschese') 
+			OR die("Could not connect to database: ".mysqli_connect_error());
+$query = "insert into FireEmblemUsers (Username, Email, Password) values ('$nuser','$email', '$npass')";
 
-				$sql = "INSERT INTO FireEmblemUsers (Username, Email, Password)
-				VALUES ($newuser', 'Doe', 'john@example.com')";
+$result = mysqli_query($dbc, $query) OR die('Invalid query: ' . mysqli_error($dbc));
+}
 
-				if ($conn->query($sql) === TRUE) {
-					echo "New record created successfully";
-				} else {
-					echo "Error: " . $sql . "<br>" . $conn->error;
-				}
+?>
 
-				$conn->close();
-				?>
-		<form method="POST" action="login.php" name="loginform" id="loginform">
-			<input type="text" 		name="newusername" id="newusername">Username</input><br>
-			<input type="password" 	name="newpassword" id="newpassword">Password</input><br>
-			<input type="email"     name="email"       id="email">Email</input><br>
-			<input type="submit" 	name="newuser" id="newuser" value="Sign Up" />
-		</form>
-		<?php } ?>
+<form method="post" name="signupform" id="signupform">
+	<input type="text" 		name="nusername" id="nusername"/>Username<br>
+	<input type="email"		name="email"	 id="email"/>Email Address<br>
+	<input type="password" 	name="npassword" id="npassword"/>Password<br>
+	<input type="submit" 	name="ncreateuser" id="ncreateuser" value="Sign Up!" />
+</form>
  </div>
   </body>
   </html>
