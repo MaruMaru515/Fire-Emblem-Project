@@ -22,13 +22,14 @@
 							echo $_SESSION['Username'];
 							echo '<br>';
 							echo "<a href=\"logout.php\">Log Out</a>";
+							echo '<br>';
+							echo "<a href=\"http://cscilab.bc.edu/~supannar/battle/charselect.php\">Pick Champion</a>";
 						}
 						else
 						{
 							echo "<a href=\"http://cscilab.bc.edu/~noschese/login1.php\">Log In</a>";
 						}
 					?>
-						<li><a href="http://cscilab.bc.edu/~supannar/battle/charselect.php">Pick Champion</a></li>
 					</ul>
 				</div>
 			</div>
