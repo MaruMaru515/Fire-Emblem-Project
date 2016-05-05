@@ -5,9 +5,11 @@
 		<title>Fire Emblem Battle Simulator</title>
 			<link rel="stylesheet" type="text/css" href="css/960_12_col.css" />
 			<link rel="stylesheet" type="text/css" href="Katzhw.css" />
-	
 	</head>
 	<body>
+	<audio autoplay loop="loop">
+	  <source src="ocean.mp3" type="audio/mpeg">
+ 	</audio>
 		<div class="container_12 clearfix">
 			<div id="header" class="grid_12">
 				<h1>Fire Emblem Fates Battle Simulator</h1>
@@ -28,8 +30,6 @@
 					?>
 						<li><a href="http://fireemblemfates.nintendo.com/">Create Team</a></li>
 						<li><a href="http://fireemblem.wikia.com/wiki/Fire_Emblem_Fates">Battle</a></li>
-						<li><a href="https://kantopia.wordpress.com/2015/06/23/fire-emblem-fates-importers-source-chapter-data-ongoing/">Records</a></li>
-						<li><a href="http://fireemblem.wikia.com/wiki/List_of_characters_in_Fire_Emblem_Fates">Chat</a></li>
 					</ul>
 				</div>
 			</div>
