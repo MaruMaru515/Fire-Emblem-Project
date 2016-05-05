@@ -28,8 +28,7 @@
 							echo "<a href=\"http://cscilab.bc.edu/~noschese/login1.php\">Log In</a>";
 						}
 					?>
-						<li><a href="http://fireemblemfates.nintendo.com/">Create Team</a></li>
-						<li><a href="http://fireemblem.wikia.com/wiki/Fire_Emblem_Fates">Battle</a></li>
+						<li><a href="http://cscilab.bc.edu/~supannar/battle/charselect.php">Pick Champion</a></li>
 					</ul>
 				</div>
 			</div>
